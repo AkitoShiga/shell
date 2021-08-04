@@ -112,4 +112,4 @@ fi
 
 find -- "$directory" -type f -name "find_name" -print0 \
     | xargs -0 grep "$grep_option" -e "$pattern" -- /dev/null
-
+Soexyaper
