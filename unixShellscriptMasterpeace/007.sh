@@ -12,7 +12,7 @@ do
 
   # ここで一時停止して標準入力を受け取る
   read number
-  #number=1
+  number=1
   case $number in
     1)
       ls
