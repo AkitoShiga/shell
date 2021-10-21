@@ -1,15 +1,18 @@
 #!/bin/bash
 
-loadconf() {
-    . ./setting.conf
-}
+# ヒアドキュメントでインデントする
 
-trap  'loadconf' HUP
+if [ -z "$1" ]; then
+    echo "title" >&2
+    exit 1
 
-loadconf
-
-while :
-do
-    uptime >> ${UPTIME_FILENAME}
-    sleep 1
-done
+else
+    # コマンド
+	cat <<-EOT
+	heihie
+	heihei
+	hiehei
+	hiehei
+		$1
+	EOT
+fi
