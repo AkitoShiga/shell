@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# ユーザーに簡易メニューを選択してもらう
+PS3='Menu :'
+
+select item in "list file" "current directory" "exit"
+do
+  case "$REPLY" in
+      1)
+        ls
+        ;;
+      2)
+        pwd
+        ;;
+      3)
+        exit
+        ;;
+      *)
+        echo "Error: Unknwon Command"
+        ;;
+  esac
+  echo
+done

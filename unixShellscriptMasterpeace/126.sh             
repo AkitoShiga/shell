@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# 足し算 掛け算をシンプルに記述する
+
+for i in {1..100}
+do
+    echo $((i*3)) > ${i}.txt
+done

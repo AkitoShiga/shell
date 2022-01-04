@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# パイプ処理で各コマンドの終了ステータスを調べる
+./script.sh | ./sort-data.sh | ./calc.sh > output.txt
+
+pipe_status=("${pipestatus[@]}")
+if [ "${pipe_status[1]} -ne 0 ]; then
+    echo "[ERROR] sort0data.sh failed" >$2
+fi

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# 中間ファイルを作成せず、コマンドの出力をファイルの用意扱う
+
+dir1="/var/tmp/backup1"
+dir2="/var/tmp/backup2"
+
+comm <(ls "$dir") <(ls "$dir2")

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# 整数値の乱数を得る
+ipaddr="192.168.2.1"
+port=80
+waittime=$((RANDOM % 10 + 1))
+nc-w 5 -zv $ipaddr $port
+echo "wait: $waittime sec."
+sleep $waittime
+nc -w 5 -zv $ipaddr $port
